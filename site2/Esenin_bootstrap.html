@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сергей Есенин</title>
+      <script src="js/jquery-3.6.0.min.js"></script>
+      <script src="js/bootstrap.js"></script>
+    <script src="js/bootstrap.js.map"></script>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap.css.map">
+    <!--<link rel="stylesheet" href="style_Esenin.css">-->
+    <style>
+    body {
+        background-color: rgb(245, 197, 197);
+    }
+        a.links1 {
+            color:black;
+        }
+        p {
+            color: rgb(21, 21, 73);
+            font-size: medium;
+            width: 500px;
+            border-radius: 10px;
+        }
+        h2 {
+            color: rgb(199, 26, 26);
+            font-size:x-large;
+            text-align:center;
+        }
+
+        .links1 {
+            color: rgb(214, 39, 214);
+            font-size:x-large;
+            text-align:left;
+        }
+
+        .title {
+            color:red;
+            font-size:xx-large;
+            text-align:center;
+        }
+
+        .links2 {
+            color:salmon;
+            font-size:xx-large;
+            text-align:left;
+        }
+        ul li {
+            background-color: rgb(168, 130, 238);
+            width: 120px;
+            border:1px solid black;
+            border-radius: 5px;
+        }
+        section li:hover {
+            background-color: tomato;
+            cursor:pointer;
+        }
+
+        section li:hover a {
+            color:rgb(222, 222, 231); 
+            font-size: x-large;
+        } 
+       footer a:hover {
+           color:black;
+       }
+        footer div:nth-child(4):hover {
+            background-color:rgb(207, 184, 184);
+            display:block;
+            width:600px;
+        }
+        .displayed {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        .text-style {
+            font-family:'Times New Roman', Times, serif;
+            font-style: italic;
+            font-weight:900;
+        }
+        section {
+            background-color: rgb(241, 191, 191);
+            padding: 30px;
+            border: 3px solid black;
+            margin-bottom: 30px;
+            border-radius: 10px;
+
+        }
+        .content {
+            background-color: rgb(243, 198, 198);
+            padding: 10px;
+            /*margin-left: auto;
+            margin-right: auto;*/
+            margin: 10px;
+            border: 3px solid rgb(168, 130, 238);
+            width: 350px;
+            box-sizing:border-box;
+        }
+       /*
+        #p1 {
+            height:300px; 
+            overflow:auto;
+            position:relative; 
+            top:20px; 
+            left:450px;
+       }
+       идентификатор p1 не стал использовать в оформлении. Использовался только как экспериментальный для отработки своейств position и overflow*/
+       @media (max-width:767px) {
+            .content {
+                margin: 5px;
+                padding: 5px;
+                border: 1px solid rgb(168, 130, 238);
+                width: 250px;
+                box-sizing: border-box;
+                font-size:small;
+            }
+            section {
+                padding: 10px;
+                border: 1px solid black;
+                margin: 10px;
+            }
+            .links2 {
+            font-size: large;
+        }
+        .title {
+            font-size: large;
+        }
+        .links2 {
+            font-size:large;
+        }
+        ul li {
+            width: 100px;
+       }
+       .links1 {
+            font-size:large;
+       }
+       section li:hover a {
+            font-size: large;
+       }
+       h2 {
+            font-size:large;
+        }
+    }
+    </style>
+</head>
+<body>
+        <section lang="ru">
+            <img class="displayed" id="portrait" src="https://litinteres.ru/wp-content/uploads/2021/02/d8554d23c326881adaeab48f35e67ccf.jpeg" width = "1018" height = "600" alt="Портрет Сергея Есенина" title="Портрет Есенина">
+            <!--<img class="displayed" id="portrait" src="Sergey_Esenin_black.jpeg" width = "1018" height = "600" alt="Портрет Сергея Есенина" title="Портрет Есенина"> - пример ссылки на внутренний ресурс-->
+            <div style="text-align:center;">&quot;Портрет Есенина&quot;</div>
+            <h1 id="poetry" class="title">С.Есенин. "Исповедь хулигана"</h1>
+        <ul>
+            <!--link to every section on the page-->
+            <li><a class="links1" href="#section1" title="начало">Отрывок 1</a></li>
+            <li><a class="links1" href="#section2" title="продолжение">Отрывок 2</a></li>
+            <li><a class="links1" href="#section3" title="кульминация">Отрывок 3</a></li>
+            <li><a class="links1" href="#section4" title="окончание">Отрывок 4</a></li>
+        </ul>
+    </section>
+    <div class="container-fluid">
+        <div class="row">
+    <section class= "col-lg-4 col-md-6 col-sm-12 col-xs-12 id="section1" lang="ru" >
+        <h2>Отрывок 1</h2>
+        <p class="content">
+            Не каждый умеет петь,<br>
+Не каждому дано яблоком<br>
+Падать к чужим ногам.<br>
+
+Сие есть самая великая исповедь,<br>
+Которой исповедуется хулиган.<br>
+Я нарочно иду нечесаным,<br>
+С головой, как керосиновая лампа, на плечах.<br>
+Ваших душ безлиственную осень<br>
+Мне нравится в потемках освещать.<br>
+Мне нравится, когда каменья брани<br>
+Летят в меня, как град рыгающей грозы,<br>
+Я только крепче жму тогда руками<br>
+Моих волос качнувшийся пузырь.<br>
+
+Так хорошо тогда мне вспоминать<br>
+Заросший пруд и хриплый звон ольхи,<br>
+Что где-то у меня живут отец и мать,<br>
+Которым наплевать на все мои стихи,<br>
+Которым дорог я, как поле и как плоть,<br>
+Как дождик, что весной взрыхляет зеленя.<br>
+Они бы вилами пришли вас заколоть<br>
+За каждый крик ваш, брошенный в меня.<br>
+</p>
+</section>
+
+<section class="col-lg-4 col-md-6 col-sm-12 col-xs-12" id="section2" lang="ru">
+    <h2>Отрывок 2</h2>
+    <p class="content">
+Бедные, бедные крестьяне!<br>
+Вы, наверно, стали некрасивыми,<br>
+Так же боитесь бога и болотных недр.<br>
+О, если б вы понимали,<br>
+Что сын ваш в России<br>
+Самый лучший поэт!<br>
+Вы ль за жизнь его сердцем не индевели,<br>
+Когда босые ноги он в лужах осенних макал?<br>
+А теперь он ходит в цилиндре<br>
+И лакированных башмаках.<br>
+
+Но живет в нем задор прежней вправки<br>
+Деревенского озорника.<br>
+Каждой корове с вывески мясной лавки<br>
+Он кланяется издалека.<br>
+И, встречаясь с извозчиками на площади,<br>
+Вспоминая запах навоза с родных полей,<br>
+Он готов нести хвост каждой лошади,<br>
+Как венчального платья шлейф.<br>
+
+Я люблю родину.<br>
+Я очень люблю родину!<br>
+Хоть есть в ней грусти ивовая ржавь.<br>
+Приятны мне свиней испачканные морды<br>
+И в тишине ночной звенящий голос жаб.<br>
+Я нежно болен вспоминаньем детства,<br>
+Апрельских вечеров мне снится хмарь и сырь.<br>
+Как будто бы на корточки погреться<br>
+Присел наш клен перед костром зари.<br>
+О, сколько я на нем яиц из гнезд вороньих,<br>
+Карабкаясь по сучьям, воровал!<br>
+Все тот же ль он теперь, с верхушкою зеленой?<br>
+По-прежнему ль крепка его кора?<br>
+</p>
+</section>
+
+    <section class="col-lg-4 col-md-6 col-sm-12 col-xs-12" id="section3" lang="ru">
+    <h2>Отрывок 3</h2>
+    <p class="content">
+А ты, любимый,<br>
+Верный пегий пес?!<br>
+От старости ты стал визглив и слеп<br>
+И бродишь по двору, влача обвисший хвост,<br>
+Забыв чутьем, где двери и где хлев.<br>
+О, как мне дороги все те проказы,<br>
+Когда, у матери стянув краюху хлеба,<br>
+Кусали мы с тобой ее по разу,<br>
+Ни капельки друг другом не погребав.<br>
+
+Я все такой же.<br>
+Сердцем я все такой же.<br>
+Как васильки во ржи, цветут в лице глаза.<br>
+Стеля стихов злаченые рогожи,<br>
+Мне хочется вам нежное сказать.<br>
+
+Спокойной ночи!<br>
+Всем вам спокойной ночи!<br>
+Отзвенела по траве сумерек зари коса... <br>
+Мне сегодня хочется очень<br>
+Из окошка луну.......... <br>
+</p>
+</section>
+    </div> <!--ending div row-->
+    </div> <!--ending div container-->
+<section id="section4" lang="ru">
+    <h2>Отрывок 4</h2>
+    <p class="content" >
+Синий свет, свет такой синий!<br>
+В эту синь даже умереть не жаль.<br>
+Ну так что ж, что кажусь я циником,<br>
+Прицепившим к заднице фонарь!<br>
+Старый, добрый, заезженный Пегас,<br>
+Мне ль нужна твоя мягкая рысь?<br>
+Я пришел, как суровый мастер,<br>
+Воспеть и прославить крыс.<br>
+Башка моя, словно август,<br>
+Льется бурливых волос вином.<br>
+Я хочу быть желтым парусом<br>
+В ту страну, куда мы плывем.<br>
+        </p>
+        <img class="displayed" src="https://avatars.mds.yandex.net/get-zen_doc/2419806/pub_60180db1b19d82187e5883e4_60180ea1d941687b700e0879/scale_1200" width="712" height="400" alt="Есенин на митинге" title="Есенин на открытии памятника Кольцову">
+        <div style="font-style: italic; text-align: center;">Выступление С.Есенина на открытии памятника Кольцову</div> 
+        <!--таргетированная встроенная стилизация. Используется редко-->
+    </section>
+   <footer style="margin: 0px 0px 50px 30px;"> 
+    <div><a class="links2" href="#poetry" lang="ru">В начало стихотворения</a></div>
+    <div><a class="links2" href="#top">В начало страницы</a></div>
+    <div><a class="links2" href="#portrait">К портрету Есенина</a></div>
+    <div><a class="links2 text-style" href="https://www.culture.ru/literature/poems/author-sergei-esenin/tag-o-zhizni" target="_blank">Переход на ресурс со стихами Есенина</a></div>
+</footer>
+</body>
+</html>
